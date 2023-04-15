@@ -1,0 +1,60 @@
+body {
+  font-family: sans-serif;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #b2d8d8;
+  text-align: center;
+  color: #004c4c;
+}
+
+h3 {
+  color: #004c4c;
+  text-transform: uppercase;
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.container .input-field input {
+  margin-top: 20px;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid #000;
+}
+
+.container .input-field input::placeholder {
+  text-align: center;
+  font-size: 16px;
+}
+
+.fa {
+  padding-left: 10px;
+}
+
+button {
+  margin-top: 40px;
+  width: 220px;
+  height: 40px;
+  background-color: #66b2b2;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.collection {
+  text-align: left;
+}
+
+.collection-item {
+  padding: 5px 0;
+  font-size: 18px;
+}
+
+.filter-task-block {
+  margin-top: 60px;
+}

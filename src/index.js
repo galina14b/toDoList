@@ -42,7 +42,6 @@ const changeTaskInLocalStorage = (task, editedTask) => {
 
   const edit = tasks.find((task) => task.id === editedTask);
   edit.value = task.value;
-  console.log(edit, tasks);
   localStorage.setItem(STORAGE_KEY, JSON.stringify(tasks));
 }
 
@@ -134,7 +133,8 @@ const filterTasks = (event) => {
 };
 
 const editTask = (event) => {
-  let text = prompt('');
+  const editedLi = event.target.closest("li");
+  let text = prompt('', editedLi.textContent);
   const isEditIcon = event.target.classList.contains("fa-edit");
 
   if (!text) {
@@ -142,7 +142,6 @@ const editTask = (event) => {
   }
 
   if (isEditIcon) {
-    const editedLi = event.target.closest("li");
     const taskText = document.createElement("span");
     taskText.className = "delete-item";
     taskText.innerHTML = '<i class="fa fa-remove"></i><i class="fa fa-edit"></i>';
